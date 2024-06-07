@@ -1,0 +1,267 @@
+<!-- Display property: in html we have three types of elements
+a> block element: element which takes up the entire line Ex: <p>
+b> inline block element: element which takes up only as much space as required
+c> inline element: elemnent which appear within a single line of text such as <span>
+we can display block element as inline block element by using diaplay property 
+like this, .xyz{display: inline-block;}
+<div> stands for division and basically it is a block, it is a block element take entire line, we can put
+various html elements inside of div thats y they are containers
+nested layout technique using it we can break the complex layout into vertical and horizontal segment
+https://supersimple.dev/exercises/youtube
+flexbox is similar to css grid it is used to crete grid layouts only but it is more flexible.
+because we have  wrote position: relatieve in thumbnail-div style so that we can place timestamp due
+to which thumbnail div will be shown above the header come over teh header
+we can make responsive design using mediaquery we can set upto what webpage size how many tumbnail 
+will be shown etc.
+padding: 4px 10px; means top and botton padding is 4px and left and right padding is 10px.
+border: 1px solid rgb(123,23,123); is another css shortcut.
+if we set some property  such as text-decoration: underline on the outer element is get passed to all
+the inner elements this is known as inheritance.
+semantic elements( <header> <nav>)are same as div element but they have special meaning to screen reader
+or any device or robot reading owr webpage, we can put owr code of header into the <header> instead of <div>
+, we can put code of sidebar into <nav> insitead of <div> so that owr webpapplication code will make
+more sence to the devices that are surfing it and we can even move owr main content of videos into 
+the <main></main> semantic element and we can rewrite div to section for the video-grid because it 
+is making multiple sections.
+
+To upload the website onto the niternet we need to write code for it first and then upload all files associ
+ated with the website onto thr github and once done github will provide us the url using which any pc can access
+that website-->
+
+ <!DOCTYPE html>
+<html>
+  <head>
+    <title>Youtube</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Styles/video.css">
+    <link rel="stylesheet" href="Styles/header.css">
+    <link rel="stylesheet" href="Styles/general.css">
+    <link rel="stylesheet" href="Styles/sidebar.css">
+  </head>
+
+  <body>
+    <div class="header-search">
+      <div class="left-section">
+        <img class="burger-menu" src="Icons/hamburger-menu.svg">
+        <img class="youtube-logo" src="Icons/youtube-logo.svg">
+      </div>
+      <div class="middle-section">
+        <input class="searchbar" type="text" placeholder="Search">
+        <button class="search-button">
+          <img class="search-icon" src="Icons/search.svg">
+          <div class="tooltip">Search</div>
+        </button>
+        <button class="voice-search-button">
+          <img class="voice-search-icon" src="Icons/voice-search-icon.svg">
+          <div class="tooltip">Search With Voice</div>
+        </button>
+      </div>
+      <div class="right-section">
+        <img class="ra" src="Icons/upload.svg">
+        <img class="rb" src="Icons/youtube-apps.svg">
+        <div class="notification">
+          <img class="rc" src="Icons/notifications.svg">
+          <div class="notification-no">
+           3
+          </div>
+        </div>
+        <img class="rd" src="Icons/my-channel.jpeg">
+      </div>
+    </div>
+
+    <div class="sidebarr">
+      <div class="sidebar-link">
+        <img class="sidebar-icons" src="Icons/home.svg">
+        <div>Home</div>
+      </div>
+      <div class="sidebar-link">
+        <img class="sidebar-icons" src="Icons/explore.svg">
+        <div>Explore</div>
+      </div>
+      <div class="sidebar-link">
+        <img class="sidebar-icons" src="Icons/subscriptions.svg">
+        <div>Subscription</div>
+      </div>
+      <div class="sidebar-link">
+        <img class="sidebar-icons" src="Icons/originals.svg">
+        <div>Originals</div>
+      </div>
+      <div class="sidebar-link">
+        <img class="sidebar-icons" src="Icons/youtube-music.svg">
+        <div>Youtube Music</div>
+      </div>
+      <div class="sidebar-link">
+        <img class="sidebar-icons" src="Icons/library.svg">
+        <div>Library</div>
+      </div>
+    </div>
+
+    <div class="video-grid">
+
+      <div class="video-preview">
+
+        <div class="thumbnail-div">
+          <img class="thumbnail" src="Images/thumbnail-1.webp">
+
+            <div class="video-time">
+                10:20
+            </div>
+
+        </div>
+  
+        <div class="xyzz">
+  
+          <div class="channel-picture">        
+            <img class="profile-picture" src="/Youtube-Project/logo/channel-1.jpeg">
+          </div>
+  
+          <div class="video-info">
+            <p class="txt1">Talking Tech and AI with Google CEO Sundar Pichari! </p>
+            <p class="txt2">Marques Brownlee</p>
+            <p class="txt3"> 3.4M views &#183; 6 months ago</p>
+          </div>
+  
+        </div>
+  
+      </div>
+  
+      <div class="video-preview">
+  
+        <div class="thumbnail-div">
+          <img class="thumbnail" src="Images/thumbnail-2.webp">
+
+            <div class="video-time">
+                15:20
+            </div>
+
+        </div>
+  
+        <div class="xyzz">
+  
+          <div class="channel-picture">        
+            <img class="profile-picture" src="/Youtube-Project/logo/channel-2.jpeg">
+          </div>
+  
+          <div class="video-info">
+            <p class="txt1">Try Not To Laugh Challenge #9</p>
+            <p class="txt2">Markiplier</p>
+            <p class="txt3"> 19M views &#183; 4 years ago</p>
+          </div>
+  
+        </div>
+  
+      </div>
+      
+      <div class="video-preview">
+  
+        <div class="thumbnail-div">
+          <img class="thumbnail" src="Images/thumbnail-3.webp">
+
+            <div class="video-time">
+                5:20
+            </div>
+
+        </div>
+  
+        <div class="xyzz">
+  
+          <div class="channel-picture">        
+            <img class="profile-picture" src="/Youtube-Project/logo/channel-3.jpeg">
+          </div>
+  
+          <div class="video-info">
+            <p class="txt1">Talking Tech and AI with Google CEO Sundar Pichari! </p>
+            <p class="txt2">Marques Brownlee</p>
+            <p class="txt3"> 3.4M views &#183; 6 months ago</p>
+          </div>
+  
+        </div>
+  
+      </div>
+  
+      <div class="video-preview">
+  
+        <div class="thumbnail-div">
+          <img class="thumbnail" src="Images/thumbnail-4.webp">
+
+            <div class="video-time">
+                12:20
+            </div>
+
+        </div>
+        <div class="xyzz">
+  
+          <div class="channel-picture">        
+            <img class="profile-picture" src="/Youtube-Project/logo/channel-4.jpeg">
+          </div>
+  
+          <div class="video-info">
+            <p class="txt1">Try Not To Laugh Challenge #9</p>
+            <p class="txt2">Markiplier</p>
+            <p class="txt3"> 19M views &#183; 4 years ago</p>
+          </div>
+  
+        </div>
+  
+      </div>
+  
+      <div class="video-preview">
+  
+        <div class="thumbnail-div">
+          <img class="thumbnail" src="Images/thumbnail-5.webp">
+
+            <div class="video-time">
+                32:20
+            </div>
+
+        </div>
+  
+        <div class="xyzz">
+  
+          <div class="channel-picture">        
+            <img class="profile-picture" src="/Youtube-Project/logo/channel-5.jpeg">
+          </div>
+  
+          <div class="video-info">
+            <p class="txt1">Talking Tech and AI with Google CEO Sundar Pichari! </p>
+            <p class="txt2">Marques Brownlee</p>
+            <p class="txt3"> 3.4M views &#183; 6 months ago</p>
+          </div>
+  
+        </div>
+  
+      </div>
+  
+      <div class="video-preview">
+  
+        <div class="thumbnail-div">
+          <img class="thumbnail" src="Images/thumbnail-6.webp">
+
+            <div class="video-time">
+                20:20
+            </div>
+
+        </div>
+  
+        <div class="xyzz">
+  
+          <div class="channel-picture">        
+            <img class="profile-picture" src="/Youtube-Project/logo/channel-6.jpeg">
+          </div>
+  
+          <div class="video-info">
+            <p class="txt1">Try Not To Laugh Challenge #9</p>
+            <p class="txt2">Markiplier</p>
+            <p class="txt3"> 19M views &#183; 4 years ago</p>
+          </div>
+  
+        </div>
+  
+      </div>
+
+    </div>
+    
+  </body>
+</html>
